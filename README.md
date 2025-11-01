@@ -106,3 +106,6 @@
 
 # flow-chart
 https://www.figma.com/design/BGppLhsjRgnQAr1qyjnxSh/my-app-%E7%94%BB%E9%9D%A2%E9%81%B7%E7%A7%BB%E5%9B%B3?node-id=1-4749&p=f&t=iXNKxQ9F5HFhPF92-0
+
+# ER図
+https://gyazo.com/4a42330ae76d1770a42ce1062d79d853
