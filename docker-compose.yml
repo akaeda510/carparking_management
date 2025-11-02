@@ -11,9 +11,9 @@ services:
       - .:/myapp
       - bundle_data:/usr/local/bundle:cached
       - node_modules:/myapp/node_modules
-    yaml environment:
+    environment:
       TZ: Asia/Tokyo
-      DATABESE_URL: ${DATABESE_URL}
+      DATABASE_URL: ${DATABASE_URL}
     ports:
       - "3000:3000" 
     healthcheck:
