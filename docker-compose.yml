@@ -4,7 +4,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.dev
-    command: bash -c "bundle install && bundle exec rails db:prepare && rm -f tmp/pids/server.pid && ./bin/dev"
+    command: bash -c "bundle install && bundle exec rails db:prepare && rm -f tmp/pids/server.pid && ./bin/dev -b '0.0.0.0'"
     tty: true
     stdin_open: true
     volumes:
@@ -13,7 +13,9 @@ services:
       - node_modules:/myapp/node_modules
     environment:
       TZ: Asia/Tokyo
-      DATABASE_URL: ${DATABASE_URL}
+      DATABASE_URL: postgres://postgres:postgres@db:5432/carparking_management_development 
+      POSTGRES_USER: akaeda510
+      POSTGRES_PASSWORD: zh6phm510
     ports:
       - "3000:3000" 
     healthcheck:
@@ -21,6 +23,24 @@ services:
       interval: 10s
       timeout: 5s
       retries: 5
+    depends_on:
+      db:
+        condition: service_healthy # dbサービスが起動完了（正常）になってから web を起動
+        
+  db:
+    image: postgres:16-alpine 
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      # volumesのpostgresql_dataとリンク
+      - postgresql_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
 volumes:
   bundle_data:
   postgresql_data:
