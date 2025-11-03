@@ -116,6 +116,9 @@ GEM
     et-orbi (1.4.0)
       tzinfo
     ffi (1.17.2-aarch64-linux-gnu)
+    ffi (1.17.2-arm64-darwin)
+    foreman (0.90.0)
+      thor (~> 1.4)
     fugit (1.12.1)
       et-orbi (~> 1.4)
       raabro (~> 1.4)
@@ -184,12 +187,15 @@ GEM
     nio4r (2.7.5)
     nokogiri (1.18.10-aarch64-linux-gnu)
       racc (~> 1.4)
+    nokogiri (1.18.10-arm64-darwin)
+      racc (~> 1.4)
     ostruct (0.6.3)
     parallel (1.27.0)
     parser (3.3.10.0)
       ast (~> 2.4.1)
       racc
     pg (1.6.2-aarch64-linux)
+    pg (1.6.2-arm64-darwin)
     pp (0.6.3)
       prettyprint
     prettyprint (0.2.0)
@@ -320,8 +326,14 @@ GEM
     stimulus-rails (1.3.4)
       railties (>= 6.0.0)
     stringio (3.1.7)
+    tailwindcss-rails (4.4.0)
+      railties (>= 7.0.0)
+      tailwindcss-ruby (~> 4.0)
+    tailwindcss-ruby (4.1.16-aarch64-linux-gnu)
+    tailwindcss-ruby (4.1.16-arm64-darwin)
     thor (1.4.0)
     thruster (0.1.16-aarch64-linux)
+    thruster (0.1.16-arm64-darwin)
     timeout (0.4.4)
     tsort (0.2.0)
     turbo-rails (2.0.20)
@@ -350,6 +362,7 @@ GEM
 
 PLATFORMS
   aarch64-linux
+  arm64-darwin-24
 
 DEPENDENCIES
   bootsnap
@@ -358,6 +371,7 @@ DEPENDENCIES
   capybara
   cssbundling-rails
   debug
+  foreman
   image_processing (~> 1.2)
   jbuilder
   jsbundling-rails
@@ -372,10 +386,11 @@ DEPENDENCIES
   solid_cache
   solid_queue
   stimulus-rails
+  tailwindcss-rails (~> 4.4)
   thruster
   turbo-rails
   tzinfo-data
   web-console
 
 BUNDLED WITH
-   2.7.2
+   2.6.9
