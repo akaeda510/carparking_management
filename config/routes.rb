@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :parking_managers
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
@@ -11,4 +12,8 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+resoources :parking_managers, only: %i[new create edit]
+get 'login', to: 'parking_managers#new'
+post 'login', to: 'parking_managers#create'
+delete 'logout', to: 'parking_managers#dstroy'
 end
