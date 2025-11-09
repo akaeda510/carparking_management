@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :parking_managers
+  devise_for :parking_managers, controllers: { sessions: 'parking_managers/sessions' }
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
@@ -11,9 +11,11 @@ Rails.application.routes.draw do
   # get "service-worker" => "rails/pwa#service_worker", as: :pwa_service_worker
 
   # Defines the root path route ("/")
-  # root "posts#index"
-resoources :parking_managers, only: %i[new create edit]
-get 'login', to: 'parking_managers#new'
-post 'login', to: 'parking_managers#create'
-delete 'logout', to: 'parking_managers#dstroy'
+  authenticated :parking_manager do
+    root to: 'dashboards#show', as: :authenticated_root
+  end
+
+  unauthenticated :parking_manager do
+    root to: redirect('/parking_managers/sign_in'), as: :unauthenticated_root
+  end
 end
