@@ -1,0 +1,5 @@
+ja:
+  devise:
+    registrations:
+      new:
+        minimum_password_length: "（%{count}文字以上）"
