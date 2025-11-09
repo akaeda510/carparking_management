@@ -4,6 +4,8 @@ source "https://rubygems.org"
 gem "rails", "~> 8.1.1"
 # The modern asset pipeline for Rails [https://github.com/rails/propshaft]
 gem "propshaft"
+# 日本語設定
+gem "rails-i18n", "~> 8.0"
 # アカウント認証
 gem 'devise'
 # TailwindCSS
@@ -64,6 +66,9 @@ end
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
+  # ライブロード（HTML・CSS更新時自動でページを更新してくれる）
+  gem 'guard'
+  gem 'guard-livereload'
 end
 
 group :test do
