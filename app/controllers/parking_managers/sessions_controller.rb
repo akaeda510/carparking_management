@@ -2,7 +2,7 @@
 
 class ParkingManagers::SessionsController < Devise::SessionsController
   # before_action :configure_sign_in_params, only: [:create]
-  before_action :set_mobile_format, only: [:new]
+  before_action :set_mobile_format, only: [ :new ]
 
   # GET /resource/sign_in
   # def new

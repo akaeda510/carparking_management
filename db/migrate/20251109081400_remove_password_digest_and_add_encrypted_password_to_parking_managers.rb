@@ -5,6 +5,5 @@ class RemovePasswordDigestAndAddEncryptedPasswordToParkingManagers < ActiveRecor
 
     # 2. Devise 用の必須カラムを追加
     add_column :parking_managers, :encrypted_password, :string, null: false, default: ""
-
   end
 end
