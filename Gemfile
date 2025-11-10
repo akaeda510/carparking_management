@@ -56,7 +56,7 @@ group :development, :test do
   gem "bundler-audit", require: false
 
   # Static analysis for security vulnerabilities [https://brakemanscanner.org/]
-  gem "brakeman", require: false
+  gem "brakeman", "~> 7.1.1", require: false
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
@@ -66,8 +66,8 @@ end
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
-  # ライブロード（HTML・CSS更新時自動でページを更新してくれる）
-    gem "rails_live_reload" 
+    # ライブロード（HTML・CSS更新時自動でページを更新してくれる）
+    gem "rails_live_reload"
 end
 
 group :test do
