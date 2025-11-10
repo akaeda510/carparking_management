@@ -67,8 +67,7 @@ group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
   # ライブロード（HTML・CSS更新時自動でページを更新してくれる）
-  gem "guard"
-  gem "guard-livereload"
+    gem "rails_live_reload" 
 end
 
 group :test do
