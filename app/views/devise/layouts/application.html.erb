@@ -23,20 +23,10 @@
   </head>
 
   <body>
-    <main class="container mx-auto mt-28 px-5 flex">
-      <main class="container mx-auto mt-8 px-5">
-        <% if parking_manager_signed_in? %>
-          <%= render 'shared/header_signed_in' %>
-        <% else %>
-          <%= render 'shared/header_public' %>
-        <% end %>
-        <%= yield %>
-      </main>
+    <%= render 'layouts/header' %> 
+    <main class="container mx-auto mt-8 p-4 max-w-md">
+      <%= yield %>
     </main>
   </body>
 </html>
-
-<% if Rails.env.development? %>
-  <%= javascript_include_tag "http://#{request.host}:35729/livereload.js" %>
-<% end %>
 

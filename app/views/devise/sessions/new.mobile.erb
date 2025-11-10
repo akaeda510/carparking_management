@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <h1>ログイン画面<h1>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 col-lg-8 mx-auto">
+        <h1>'ログイン'</h1>
+          <%= form_with model: resource, scope: resource_name, url:session_path(resource_name) do |f| %>
+          <div class="mb-3 bg-cyan-100 text-lg">
+            <%= f.label :email %>
+            <%= f.email_field :email, class: "form-control" %>
+          </div>
+          <div class="mb-3">
+            <%= f.label :password %>
+            <%= f.password_field :password, class: "form-control" %>
+          </div>
+          <%= f.submit 'ログイン', class: "btn btn-primaty" %>
+        <% end %>
+        <div class="text-center">
+          <%= link_to 'アカウント作成', new_parking_manager_registration_path %>
+        </div>
+      </div>
+    </div>
+  </div>
+</html>
+

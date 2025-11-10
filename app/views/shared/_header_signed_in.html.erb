@@ -1,0 +1,22 @@
+<header class="bg-gray-800 text-white p-4 shadow-md fixed fixed top-0 w-full z-10">
+  <div class="container mx-auto flex justify-between items-center">
+    <div class="text-2xl font-bold">
+      <a href="/" class="text-white hover:text-gray-300">駐車場管理</a>
+    </div>
+
+    <div class="relative group">
+      <button class="flex items-center space-x-2 text-white hover:text-gray-300 focus:outline-none">
+        <span class="text-lg">アカウント</span>
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </button>
+
+      <div class="absolute right-0 mt-2 w-48 bg-white text-gray-800 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-right scale-95 group-hover:scale-100 z-50">
+        <a href="<%= edit_parking_manager_registration_path %>" class="block px-4 py-2 text-sm hover:bg-gray-100">アカウント編集</a>
+        <%= link_to "ログアウト", destroy_parking_manager_session_path, data: { turbo_method: :delete }, class: "block px-4 py-2 text-sm hover:bg-gray-100" %>
+        </div>
+    </div>
+  </div>
+</header>
+

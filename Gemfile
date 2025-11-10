@@ -4,6 +4,12 @@ source "https://rubygems.org"
 gem "rails", "~> 8.1.1"
 # The modern asset pipeline for Rails [https://github.com/rails/propshaft]
 gem "propshaft"
+# 日本語設定
+gem "rails-i18n", "~> 8.0"
+# アカウント認証
+gem 'devise'
+# TailwindCSS
+gem "tailwindcss-rails", "~> 4.4"
 # Use postgresql as the database for Active Record
 gem "pg", "~> 1.1"
 # Use the Puma web server [https://github.com/puma/puma]
@@ -60,6 +66,9 @@ end
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
+  # ライブロード（HTML・CSS更新時自動でページを更新してくれる）
+  gem 'guard'
+  gem 'guard-livereload'
 end
 
 group :test do
@@ -68,4 +77,3 @@ group :test do
   gem "selenium-webdriver"
 end
 
-gem "tailwindcss-rails", "~> 4.4"
