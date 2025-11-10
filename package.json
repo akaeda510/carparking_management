@@ -1,0 +1,11 @@
+{
+	"name": "carparking_management",
+	"private": true,
+	"dependencies": {
+		"tailwindcss": "^3.4.4",
+		"esbuild": "^0.23.0"
+	},
+	"scripts": { 
+		"build": "node esbuild.config.js" 
+	}
+}
