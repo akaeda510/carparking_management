@@ -8,6 +8,7 @@
     "postcss-cli": "^11.0.0"
   },
   "scripts": {
-    "build": "node ./esbuild.config.js"
+    "build": "node ./esbuild.config.js",
+    "build:css": "tailwindcss -i ./app/assets/stylesheets/application.css -o ./app/assets/builds/tailwind.css --minify"
   }
 }
