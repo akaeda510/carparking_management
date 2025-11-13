@@ -1,4 +1,4 @@
-FROM ruby:3.3.0
+FROM ruby:3.4.7
 ENV LANG C.UTF-8
 ENV TZ Asia/Tokyo
 RUN gem install rails -v '~> 8.0'
@@ -16,7 +16,7 @@ rm -rf /var/lib/apt/lists/*
 RUN mkdir /myapp
 WORKDIR /myapp
 ENV PATH /myapp/node_modules/.bin:$PATH
-COPY Gemfile Gemfile.lock /myapp/
+COPY Gemfile /myapp/
 RUN gem install bundler
 RUN bundle install
 COPY . /myapp
