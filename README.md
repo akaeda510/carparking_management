@@ -87,7 +87,7 @@
 ## 使用する技術スタック
 - Rails 8
 - TailwindCSS
-- ruby
+- ruby 3.4.7
 - neon
 - Render
 
