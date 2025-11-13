@@ -7,3 +7,8 @@ ja:
     actions:
       submit:
         Sign up: 登録
+    sessions:
+      new:
+        title: ログイン画面
+        email: メールアドレス
+        password: パスワード
