@@ -13,8 +13,8 @@ bundle exec rails assets:precompile
 # --- 2. データベースのマイグレーション ---
 # 本番データベース（Neon）にテーブルを作成・更新します。
 echo "== Rails Database Migration =="
-bundle exec rails db:migrate
+RAILS_ENV=production bundle exec rails db:migrate
 
 echo "== Build complete =="
 
-nqm install
+npm install
