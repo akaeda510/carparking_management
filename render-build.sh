@@ -16,3 +16,5 @@ echo "== Rails Database Migration =="
 bundle exec rails db:migrate
 
 echo "== Build complete =="
+
+nqm install
