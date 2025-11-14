@@ -25,7 +25,6 @@ default: &default
 
 development:
   <<: *default
-  database: myapp_development
   host: db
   username: <%= ENV.fetch("POSTGRES_USER") { "postgres" } %>
   password: <%= ENV.fetch("POSTGRES_PASSWORD") { "postgres" } %>
