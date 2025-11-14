@@ -90,5 +90,6 @@ test:
 production:
   primary: &primary_production
     <<: *default
+    host: nil
     url: <%= ENV['DATABASE_URL'] %>
 
