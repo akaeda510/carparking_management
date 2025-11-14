@@ -18,3 +18,5 @@ RAILS_ENV=production bundle exec rails db:migrate
 echo "== Build complete =="
 
 npm install
+
+PGHOST=0.0.0.0
