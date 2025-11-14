@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  devise_for :parking_managers
   devise_for :parking_managers, controllers: { sessions: "parking_managers/sessions" }
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
