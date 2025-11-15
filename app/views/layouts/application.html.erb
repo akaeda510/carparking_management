@@ -19,24 +19,16 @@
     <link rel="apple-touch-icon" href="/icon.png">
 
     <%# Includes all stylesheet files in app/assets/stylesheets %>
-    <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "tailwind", "data-turbo-track": "reload" %>
   </head>
 
   <body>
-    <main class="container mx-auto mt-28 px-5 flex">
-      <main class="container mx-auto mt-8 px-5">
         <% if parking_manager_signed_in? %>
           <%= render 'shared/header_signed_in' %>
         <% else %>
           <%= render 'shared/header_public' %>
         <% end %>
         <%= yield %>
-      </main>
-    </main>
   </body>
 </html>
-
-<% if Rails.env.development? %>
-  <%= javascript_include_tag "http://#{request.host}:35729/livereload.js" %>
-<% end %>
 
