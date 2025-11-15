@@ -8,8 +8,6 @@ gem "propshaft"
 gem "rails-i18n", "~> 8.0"
 # アカウント認証
 gem "devise"
-# TailwindCSS
-gem "tailwindcss-rails", "~> 4.4"
 # Use postgresql as the database for Active Record
 gem "pg", "~> 1.1"
 # Use the Puma web server [https://github.com/puma/puma]
